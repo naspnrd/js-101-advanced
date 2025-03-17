@@ -1,0 +1,12 @@
+{
+  "name": "Neeraj",
+  "age": 26,
+  "isStudent": false,
+  "address": {
+    "street": "Bangalore",
+    "city": "Bangalore",
+    "postalCode": "555555"
+  },
+  "hobbies": ["travelling", "Bike Rides", "Gaming"],
+  "hasPets": null
+}
