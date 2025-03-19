@@ -1,0 +1,40 @@
+/* * {
+    padding: 10px;
+} */
+
+/* Descendant Combinator(space): Selects all elements that are descendants of a 
+    specified element. It is represented by a space between two selectors.
+*/
+
+/* #container .content {
+    color: red;
+} */
+
+/* Child Combinator(>): Selects all direct childre of a specified element. It is
+    represented by the > symbol b/w two selectors
+*/
+
+/* #container > .content {
+     color: blue
+} */
+
+/* Adjacent Sibling Combinator(+): Selects the element that is immediately preceded 
+    by specified element . It is represented by + symbole b/w two selectors
+*/
+
+/* .title + .content {
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+/* General Sibling Combinator(~): Select all elements that are siblings of a specified element
+*/
+
+/* .title ~ .content {
+    font-style: italic;
+} */
+
+
+.active-btn {
+    color: red;
+}
