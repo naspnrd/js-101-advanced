@@ -69,7 +69,7 @@
 // It modifies arr string from the index start: remove deleteCount
 // elements and then insert elem1, elem2, ... at their place. Returns tha array
 
-let arr = [1, 2, 3, 4];
+// let arr = [1, 2, 3, 4];
 //         0  1  2  3
 //        -4 -3 -2 -1
 
@@ -80,9 +80,9 @@ let arr = [1, 2, 3, 4];
 // console.log(arr);
 
 // Negative indices allowed
-arr.splice(-1, 0, 7, 8); // from index -1 (one step from end) delete 0 elements and
-// insert 7 and 8
-console.log(arr); // [1, 2, 3, 7, 8, 4]
+// arr.splice(-1, 0, 7, 8); // from index -1 (one step from end) delete 0 elements and
+// // insert 7 and 8
+// console.log(arr); // [1, 2, 3, 7, 8, 4]
 
 // slice()
 // arr.slice(start, end)
@@ -103,3 +103,17 @@ console.log(arr); // [1, 2, 3, 7, 8, 4]
 
 // splice() modifies the original array by removing or replacing exisitng elements. useful for
 // making changes to array in place
+
+let arr = [1, 2, 3, 4];
+
+Array.prototype.myShift = function () {
+  const firstElement = this[0];
+  for (let i = 0; i < this.length; i++) {
+    this[i] = this[i + 1];
+  }
+  this.length--;
+  return firstElement;
+};
+
+// console.log(arr.shift(), arr);
+console.log(arr.myShift(), arr);
