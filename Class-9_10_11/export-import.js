@@ -51,6 +51,20 @@ function applyStylesToCell(cell, styles) {
   cell.style.color = styles.textColor;
   cell.style.backgroundColor = styles.backgroundColor;
 }
+
+/* 
+HW: Implement multisheet functionlity
+
+AllSheets = {
+    sheet1: state1,
+    sheet2: state2,
+    sheet3: state3
+}
+
+every sheet is like a radio button because you can select only one at a time out of all given sheet
+*/
+
+// =========================
 // const download = document.getElementById("download");
 // const upload = document.getElementById("upload");
 
