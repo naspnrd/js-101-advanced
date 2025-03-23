@@ -9,47 +9,62 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> -->
   </head>
   <body>
     <section class="options">
-      <form class="form-container fr-aic" id="options-form">
-        <select name="fontFamily">
-          <option value="default">Default</option>
-          <!-- <option value="default">Default1</option>
-          <option value="default">Default2</option> -->
-        </select>
-        <input type="number" name="fontSize" value="16" />
-        <input type="checkbox" name="isBold" id="isBold" />
-        <label for="isBold" class="material-icons">format_bold</label>
-        <input type="checkbox" name="isItalic" id="isItalic" />
-        <label for="isItalic" class="material-icons">format_italic</label>
-        <input type="checkbox" name="isUnderlined" id="isUnderlined" />
-        <label for="isUnderlined" class="material-icons"
-          >format_underlined</label
-        >
-        <div class="align-container fr-aic">
-          <input type="radio" name="align" value="left" id="left" checked />
-          <label for="left" class="material-icons">format_align_left</label>
-          <input type="radio" name="align" value="center" id="center" />
-          <label for="center" class="material-icons">format_align_center</label>
-          <input type="radio" name="align" value="right" id="right" />
-          <label for="right" class="material-icons">format_align_right</label>
-        </div>
-        <input type="color" name="textColor" id="textColor" />
-        <label for="textColor" class="material-icons">format_color_text</label>
-        <input
-          type="color"
-          name="backgroundColor"
-          id="backgroundColor"
-          value="#ffffff"
-        />
-        <label for="backgroundColor" class="material-icons"
-          >format_color_fill</label
-        >
-      </form>
+      <div
+        class="fr-aic"
+        style="align-items: center; background-color: #edf2fa"
+      >
+        <form class="form-container fr-aic" id="options-form">
+          <select name="fontFamily">
+            <option value="default">Default</option>
+            <!-- <option value="default">Default1</option>
+            <option value="default">Default2</option> -->
+          </select>
+          <input type="number" name="fontSize" value="16" />
+          <input type="checkbox" name="isBold" id="isBold" />
+          <label for="isBold" class="material-icons">format_bold</label>
+          <input type="checkbox" name="isItalic" id="isItalic" />
+          <label for="isItalic" class="material-icons">format_italic</label>
+          <input type="checkbox" name="isUnderlined" id="isUnderlined" />
+          <label for="isUnderlined" class="material-icons"
+            >format_underlined</label
+          >
+          <div class="align-container fr-aic">
+            <input type="radio" name="align" value="left" id="left" checked />
+            <label for="left" class="material-icons">format_align_left</label>
+            <input type="radio" name="align" value="center" id="center" />
+            <label for="center" class="material-icons"
+              >format_align_center</label
+            >
+            <input type="radio" name="align" value="right" id="right" />
+            <label for="right" class="material-icons">format_align_right</label>
+          </div>
+          <input type="color" name="textColor" id="textColor" />
+          <label for="textColor" class="material-icons"
+            >format_color_text</label
+          >
+          <input
+            type="color"
+            name="backgroundColor"
+            id="backgroundColor"
+            value="#ffffff"
+          />
+          <label for="backgroundColor" class="material-icons"
+            >format_color_fill</label
+          >
+        </form>
+        <span type="button" id="download" class="material-icons">
+          cloud_download
+        </span>
+        <label for="upload" class="material-icons">cloud_upload</label>
+        <input type="file" id="upload" style="display: none" />
+      </div>
       <div class="box fr-aic">
         <div class="selected-cell">null</div>
-        <input type="text" placeholder="Evaluate Expression" />
+        <input type="text" placeholder="Evaluate Expression" id="expression" />
       </div>
     </section>
     <section class="container">
@@ -60,5 +75,6 @@
     </section>
     <script src="script.js"></script>
     <script src="options.js"></script>
+    <script src="export-import.js"></script>
   </body>
 </html>
