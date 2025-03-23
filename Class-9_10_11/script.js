@@ -30,6 +30,7 @@ for (let row = 1; row <= rows; row++) {
   for (let col = 1; col < columns; col++) {
     const colCell = document.createElement("div");
     colCell.classList.add("cell");
+    colCell.id = `${String.fromCharCode(64 + col)}${row}`;
     colCell.contentEditable = true;
     rowCells.appendChild(colCell);
   }

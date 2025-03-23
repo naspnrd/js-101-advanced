@@ -76,3 +76,70 @@
     overflow-y: hidden;
     font-family: normal;
 }
+
+.options {
+    background-color: #f9fbfd;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-container {
+    padding: 10px;
+    margin: 0 30px;
+    background-color: #edf2fa;
+    border-bottom: 50px;
+    align-items: center;
+}
+
+.fr-aic {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    display: none;
+}
+
+input[type="color"] {
+    width: 0;
+    height: 0;
+    /* border: none; */
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked + label, input[type="radio"]:checked + label {
+    background-color: #d3e2fd;
+}
+
+label {
+    padding: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.box {
+    width: 90vw;
+    margin: auto;
+}
+
+.box input {
+    flex-grow: 1;
+    padding: 5px;
+    border-radius: 50px;
+    border-width: 1px;
+}
+
+.box .selected-cell {
+    background-color: #d3e2fd;
+    padding: 5px;
+    border-radius: 5px;
+    width: 40px;
+    text-align: center;
+}
+
+.active-cell {
+    border: 1px solid #0957d0;
+}

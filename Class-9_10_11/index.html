@@ -5,8 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Sheet Clone</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <section class="options">
+      <form class="form-container fr-aic" id="options-form">
+        <select name="fontFamily">
+          <option value="default">Default</option>
+          <!-- <option value="default">Default1</option>
+          <option value="default">Default2</option> -->
+        </select>
+        <input type="number" name="fontSize" value="16" />
+        <input type="checkbox" name="isBold" id="isBold" />
+        <label for="isBold" class="material-icons">format_bold</label>
+        <input type="checkbox" name="isItalic" id="isItalic" />
+        <label for="isItalic" class="material-icons">format_italic</label>
+        <input type="checkbox" name="isUnderlined" id="isUnderlined" />
+        <label for="isUnderlined" class="material-icons"
+          >format_underlined</label
+        >
+        <div class="align-container fr-aic">
+          <input type="radio" name="align" value="left" id="left" checked />
+          <label for="left" class="material-icons">format_align_left</label>
+          <input type="radio" name="align" value="center" id="center" />
+          <label for="center" class="material-icons">format_align_center</label>
+          <input type="radio" name="align" value="right" id="right" />
+          <label for="right" class="material-icons">format_align_right</label>
+        </div>
+        <input type="color" name="textColor" id="textColor" />
+        <label for="textColor" class="material-icons">format_color_text</label>
+        <input
+          type="color"
+          name="backgroundColor"
+          id="backgroundColor"
+          value="#ffffff"
+        />
+        <label for="backgroundColor" class="material-icons"
+          >format_color_fill</label
+        >
+      </form>
+      <div class="box fr-aic">
+        <div class="selected-cell">null</div>
+        <input type="text" placeholder="Evaluate Expression" />
+      </div>
+    </section>
     <section class="container">
       <div class="juntion-cell"></div>
       <div class="head-row"></div>
@@ -14,5 +59,6 @@
       <div class="body"></div>
     </section>
     <script src="script.js"></script>
+    <script src="options.js"></script>
   </body>
 </html>
